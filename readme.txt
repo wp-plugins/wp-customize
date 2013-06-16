@@ -8,7 +8,7 @@ Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows you to set up a custom login page, including your logo. It also allows you to set a custom footer by adding in your own text or HTML.
+This plugin allows you to set up a custom login page and set a custom footer message in the WordPress Admin.
 
 == Description ==
 
@@ -19,6 +19,8 @@ This plugin allows you to set up a custom login page, including your logo. It al
 * Sets the URL of your blog as the URL visited when a user clicks the logo on the Wordpress Admin login page.
 * Sets the title (seen when you hover your mouse over the logo) of the logo's link to be your blog's name.
 * Allows you to specify the background color and the text/links color of the Wordpress Admin login page.
+
+Please be sure and rate this plugin if you like it! Thanks
 
 == Installation ==
 
@@ -31,7 +33,7 @@ This plugin allows you to set up a custom login page, including your logo. It al
 
 = Has this plugin been tested on versions of WordPress before version 3.5? =
 
-At this time, no it has not. It's a pretty simple plugin so there shouldn't be any issues, but if you do come across anything just let us know and we will take a look.
+At this time, no it has not. It's a pretty simple plugin so there shouldn't be any issues, but if you do come across anything just contact us and we will take a look.
 
 == Screenshots ==
 
