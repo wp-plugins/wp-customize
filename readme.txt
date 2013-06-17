@@ -1,7 +1,7 @@
 === WP Customize ===
 Contributors: websightdesigns
 Donate link: http://www.websightdesigns.com/payments/
-Tags: admin, customize, login logo, admin footer
+Tags: admin, customize, login logo, admin footer, custom login, login page, custom page, footer
 Requires at least: 3.0.1
 Tested up to: 3.5
 Stable tag: 4.3
