@@ -20,7 +20,7 @@ This plugin allows you to set up a custom login page, including your logo. It al
 * Sets the title (seen when you hover your mouse over the logo) of the logo's link to be your blog's name.
 * Allows you to specify the background color and the text/links color of the Wordpress Admin login page.
 
-Please be sure and rate this plugin if you like it! Thanks
+`Please be sure and rate this plugin! Thanks!`
 
 == Installation ==
 
