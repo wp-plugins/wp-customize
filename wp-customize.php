@@ -32,7 +32,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 // enqueue javascript
 function wsd_load_javascript() {
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'wsd-customize-js', plugin_dir_url(__FILE__) . '/script.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'wsd-customize-js', plugin_dir_url(__FILE__) . 'script.js', array( 'jquery' ), '1.0', true );
 }
 add_action( 'admin_enqueue_scripts', 'wsd_load_javascript' );
 add_action( 'login_enqueue_scripts', 'wsd_load_javascript' );
@@ -177,13 +177,13 @@ add_filter('admin_footer_text', 'wsd_remove_footer_admin');
  * Add a custom logo to the Wordpress Admin header
  */
 function wsd_custom_logo() {
-	?><style type="text/css">
+	echo '<style type="text/css">
 		#header-logo, #login h1 a {
 			background-image: url(' . html_entity_decode(get_option('wsd_admin_logo')) . ') !important;
 			background-size: ' . html_entity_decode(get_option('wsd_admin_logo_width')) . 'px ' . html_entity_decode(get_option('wsd_admin_logo_height')) . 'px !important;
 			height: ' . html_entity_decode(get_option('wsd_admin_logo_area')) . 'px !important;
 		}
-	</style><?php
+	</style>';
 }
 add_action('admin_head', 'wsd_custom_logo');
 
@@ -191,7 +191,7 @@ add_action('admin_head', 'wsd_custom_logo');
  * Add a custom logo to the Wordpress Admin login page header
  */
 function wsd_custom_login_logo() {
-	?><style type="text/css">
+	echo '<style type="text/css">
 		#login h1 a {
 			background-image:url(' . html_entity_decode(get_option('wsd_admin_logo')) . ') !important;
 			background-size: ' . html_entity_decode(get_option('wsd_admin_logo_width')) . 'px ' . html_entity_decode(get_option('wsd_admin_logo_height')) . 'px !important;
@@ -201,7 +201,7 @@ function wsd_custom_login_logo() {
 		body { background-color:#' . html_entity_decode(get_option('wsd_admin_bgcolor', '000')) . ' !important; }
 		#login #nav a, #login #backtoblog a { color: #' . html_entity_decode(get_option('wsd_admin_linkcolor', 'fff')) . ' !important; text-shadow: none !important; }
 		#login #nav a:hover, #login #backtoblog a:hover { color: #' . html_entity_decode(get_option('wsd_admin_linkhovercolor', 'cfcfcf')) . ' !important; text-shadow: none !important; }
-	</style><?php
+	</style>';
 }
 add_action('login_head', 'wsd_custom_login_logo');
 
