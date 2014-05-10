@@ -30,7 +30,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 // enqueue javascript
-wp_enqueue_script( 'wsd-customize-js', plugin_dir_url(__FILE__) . '/script.js', array(), '1.0', true );
+function wsd_load_javascript() {
+    wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'wsd-customize-js', plugin_dir_url(__FILE__) . '/script.js', array( 'jquery' ), '1.0', true );
+}
+add_action( 'admin_enqueue_scripts', 'wsd_load_javascript' );
+add_action( 'login_enqueue_scripts', 'wsd_load_javascript' );
 
 // hook for adding admin menus
 add_action('admin_menu', 'wsd_add_pages');
