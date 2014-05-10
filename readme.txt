@@ -42,10 +42,9 @@ At this time, no it has not. It's a pretty simple plugin so there shouldn't be a
 
 == Changelog ==
 
+= 0.2 =
+
+This version adds the option to set the width of the logo area.
+
 = 0.1 =
 * This is the first version of this plugin. There will very likely be enhancements to it as time goes on, so feel free to let us know how we could improve it!
-
-== Upgrade Notice ==
-
-= 0.1 =
-This version fixes the fact that you didn't have the plugin installed until now because it didn't exist!
