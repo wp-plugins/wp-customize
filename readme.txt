@@ -22,9 +22,8 @@ This plugin allows you to set up a custom login page, including your logo. It al
 
 `Please be sure and rate this plugin! Thanks!`
 
-Visit our website at http://www.websightdesigns.com/
-
 == Installation ==
+
 
 1. Upload the `customize` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress

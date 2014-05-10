@@ -40,6 +40,7 @@ function wsd_add_pages() {
 	// Add a new submenu under Settings:
 	add_options_page(__('Customize','wsd-menu'), __('Customize','wsd-menu'), 'manage_options', 'settings', 'wsd_settings_page');
 }
+
 // wsd_settings_page() displays the page content for the Test settings submenu
 function wsd_settings_page() {
 	//must check that the user has the required capability
@@ -59,7 +60,8 @@ function wsd_settings_page() {
 		update_option('wsd_admin_logo', htmlentities(stripslashes($_POST['wsd_admin_logo'])));
 		update_option('wsd_admin_logo_width', htmlentities(stripslashes($_POST['wsd_admin_logo_width'])));
 		update_option('wsd_admin_logo_height', htmlentities(stripslashes($_POST['wsd_admin_logo_height'])));
-		update_option('wsd_admin_logo_area', htmlentities(stripslashes($_POST['wsd_admin_logo_area'])));
+		update_option('wsd_admin_logo_area_width', htmlentities(stripslashes($_POST['wsd_admin_logo_area_width'])));
+		update_option('wsd_admin_logo_area_height', htmlentities(stripslashes($_POST['wsd_admin_logo_area_height'])));
 		update_option('wsd_admin_bgcolor', htmlentities(stripslashes($_POST['wsd_admin_bgcolor'])));
 		update_option('wsd_admin_linkcolor', htmlentities(stripslashes($_POST['wsd_admin_linkcolor'])));
 		update_option('wsd_admin_linkhovercolor', htmlentities(stripslashes($_POST['wsd_admin_linkhovercolor'])));
@@ -96,10 +98,18 @@ function wsd_settings_page() {
 				</td>
 			</tr>
 			<tr valign="top">
+				<th scope="row"><?php _e("Logo Area Width:", 'wsd-menu'); ?> </th>
+				<td>
+				<input type="text" size="5" name="wsd_admin_logo_area_width" value="<?php
+					echo ($_POST['wsd_admin_logo_area_width'] ? $_POST['wsd_admin_logo_area_width'] : html_entity_decode(get_option('wsd_admin_logo_area_width', htmlentities(get_option('wsd_admin_logo_area_width')))) );
+				?>"> px.
+				</td>
+			</tr>
+			<tr valign="top">
 				<th scope="row"><?php _e("Logo Area Height:", 'wsd-menu'); ?> </th>
 				<td>
-				<input type="text" size="5" name="wsd_admin_logo_area" value="<?php
-					echo ($_POST['wsd_admin_logo_area'] ? $_POST['wsd_admin_logo_area'] : html_entity_decode(get_option('wsd_admin_logo_area', htmlentities(get_option('wsd_admin_logo_area')))) );
+				<input type="text" size="5" name="wsd_admin_logo_area_height" value="<?php
+					echo ($_POST['wsd_admin_logo_area_height'] ? $_POST['wsd_admin_logo_area_height'] : html_entity_decode(get_option('wsd_admin_logo_area_height', htmlentities(get_option('wsd_admin_logo_area_height')))) );
 				?>"> px.
 				</td>
 			</tr>
@@ -159,35 +169,48 @@ function wsd_remove_footer_admin () {
 add_filter('admin_footer_text', 'wsd_remove_footer_admin');
 
 /**
- * Adds a custom logo to the Wordpress Admin login page
+ * Add a custom logo to the Wordpress Admin header
  */
 function wsd_custom_logo() {
-	echo '<style type="text/css">
-		#header-logo, .login h1 a {
+	?><style type="text/css">
+		#header-logo, #login h1 a {
 			background-image: url(' . html_entity_decode(get_option('wsd_admin_logo')) . ') !important;
 			background-size: ' . html_entity_decode(get_option('wsd_admin_logo_width')) . 'px ' . html_entity_decode(get_option('wsd_admin_logo_height')) . 'px !important;
 			height: ' . html_entity_decode(get_option('wsd_admin_logo_area')) . 'px !important;
 		}
-	</style>';
+	</style><?php
 }
 add_action('admin_head', 'wsd_custom_logo');
+
+/**
+ * Add a custom logo to the Wordpress Admin login page header
+ */
 function wsd_custom_login_logo() {
-	echo '<style type="text/css">
-		h1 a {
+	?><style type="text/css">
+		#login h1 a {
 			background-image:url(' . html_entity_decode(get_option('wsd_admin_logo')) . ') !important;
 			background-size: ' . html_entity_decode(get_option('wsd_admin_logo_width')) . 'px ' . html_entity_decode(get_option('wsd_admin_logo_height')) . 'px !important;
-			height: ' . html_entity_decode(get_option('wsd_admin_logo_area')) . 'px !important;
+			height: ' . html_entity_decode(get_option('wsd_admin_logo_area_height')) . 'px !important;
+			width: ' . html_entity_decode(get_option('wsd_admin_logo_area_width')) . 'px !important;
 		}
 		body { background-color:#' . html_entity_decode(get_option('wsd_admin_bgcolor', '000')) . ' !important; }
 		#login #nav a, #login #backtoblog a { color: #' . html_entity_decode(get_option('wsd_admin_linkcolor', 'fff')) . ' !important; text-shadow: none !important; }
 		#login #nav a:hover, #login #backtoblog a:hover { color: #' . html_entity_decode(get_option('wsd_admin_linkhovercolor', 'cfcfcf')) . ' !important; text-shadow: none !important; }
-	</style>';
+	</style><?php
 }
 add_action('login_head', 'wsd_custom_login_logo');
+
+/**
+ * Set a custom URL for the WordPress Admin login form to redirect to
+ */
 function wsd_custom_login_url() {
 	return site_url();
 }
 add_filter('login_headerurl', 'wsd_custom_login_url');
+
+/**
+ * Set a custom WordPress Admin login page header title
+ */
 function wsd_login_header_title() {
 	return get_bloginfo(‘name’);
 }
