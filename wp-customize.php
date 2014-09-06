@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WP_Customize
- * @version 0.2
+ * @version 0.3
  */
 /*
 Plugin Name: WP-Customize
