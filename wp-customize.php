@@ -82,7 +82,7 @@ function wsd_settings_page() {
     	<?php //settings_fields('myoption-group'); ?>
     	<?php //do_settings_fields('myoption-group'); ?>
     	<input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
-		<p><strong>Wordpress Admin Login</strong></p>
+		<h3>Wordpress Admin Login</h3>
 		<table class="form-table">
 			<tr valign="top">
 				<th scope="row"><?php _e("Custom Logo URL:", 'wsd-menu'); ?> </th>
@@ -143,7 +143,7 @@ function wsd_settings_page() {
 				</td>
 			</tr>
 		</table>
-		<p><strong>Wordpress Admin Footer</strong></p>
+		<h3>Wordpress Admin Footer</h3>
 		<table class="form-table">
 			<tr valign="top">
 				<th scope="row"><?php _e("Admin Footer:", 'wsd-menu'); ?> </th>

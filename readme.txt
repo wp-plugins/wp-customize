@@ -1,10 +1,10 @@
 === WP Customize ===
 Contributors: websightdesigns
-Donate link: http://www.websightdesigns.com/payments/
+Donate link: http://www.websightdesigns.com/
 Tags: admin, customize, login logo, admin footer, custom login, login page, custom page, footer
 Requires at least: 3.0.1
-Tested up to: 3.5
-Stable tag: 0.2
+Tested up to: 4.0
+Stable tag: 0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,11 @@ At this time, no it has not. It's a pretty simple plugin so there shouldn't be a
 2. A screenshot of a customized login page
 
 == Changelog ==
+
+= 0.3 =
+
+* Modified the markup for the sub-section headers in the Customize page found under the Settings section of the WordPress admin to make it more obvious there are different sections.
+* Tested the plugin with WordPress version 4.0 and found no problems.
 
 = 0.2 =
 
