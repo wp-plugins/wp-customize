@@ -82,6 +82,7 @@ function wsd_settings_page() {
     	<?php //settings_fields('myoption-group'); ?>
     	<?php //do_settings_fields('myoption-group'); ?>
     	<input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
+		<hr />
 		<h3>Wordpress Admin Login</h3>
 		<table class="form-table">
 			<tr valign="top">
@@ -143,6 +144,7 @@ function wsd_settings_page() {
 				</td>
 			</tr>
 		</table>
+		<hr />
 		<h3>Wordpress Admin Footer</h3>
 		<table class="form-table">
 			<tr valign="top">
@@ -154,6 +156,7 @@ function wsd_settings_page() {
 				</td>
 			</tr>
 		</table>
+		<hr />
 		<?php submit_button(); ?>
 	</form>
 	</div>
