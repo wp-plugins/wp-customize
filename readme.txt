@@ -35,6 +35,10 @@ This plugin allows you to set up a custom login page, including your logo. It al
 
 At this time, no it has not. It's a pretty simple plugin so there shouldn't be any issues, but if you do come across anything just contact us and we will take a look.
 
+= Has this plugin been tested on WordPress version 4.0? =
+
+Yes, and there were no known issues that we found with it. It's a pretty simple plugin but if you should come across a problem just let us know.
+
 == Screenshots ==
 
 1. A screenshot of the Settings page
