@@ -83,7 +83,7 @@ function wsd_settings_page() {
     	<?php //do_settings_fields('myoption-group'); ?>
     	<input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
 		<hr />
-		<h3>Wordpress Admin Login</h3>
+		<h3>WordPress Admin Login</h3>
 		<table class="form-table">
 			<tr valign="top">
 				<th scope="row"><?php _e("Custom Logo URL:", 'wsd-menu'); ?> </th>
@@ -145,7 +145,7 @@ function wsd_settings_page() {
 			</tr>
 		</table>
 		<hr />
-		<h3>Wordpress Admin Footer</h3>
+		<h3>WordPress Admin Footer</h3>
 		<table class="form-table">
 			<tr valign="top">
 				<th scope="row"><?php _e("Admin Footer:", 'wsd-menu'); ?> </th>
@@ -164,10 +164,10 @@ function wsd_settings_page() {
 }
 
 /**
- * Set a new footer in the Wordpress Admin
+ * Set a new footer in the WordPress Admin
  */
 function wsd_remove_footer_admin () {
-	$wsd_footer_default_value = 'Thank you for creating with <a href="http://wordpress.org/">Wordpress</a>.';
+	$wsd_footer_default_value = 'Thank you for creating with <a href="http://wordpress.org/">WordPress</a>.';
 	if(get_option('wsd_admin_footer_contents') == "") {
 		echo $wsd_footer_default_value;
 	} else {
@@ -177,7 +177,7 @@ function wsd_remove_footer_admin () {
 add_filter('admin_footer_text', 'wsd_remove_footer_admin');
 
 /**
- * Add a custom logo to the Wordpress Admin header
+ * Add a custom logo to the WordPress Admin header
  */
 function wsd_custom_logo() {
 	echo '<style type="text/css">
@@ -191,7 +191,7 @@ function wsd_custom_logo() {
 add_action('admin_head', 'wsd_custom_logo');
 
 /**
- * Add a custom logo to the Wordpress Admin login page header
+ * Add a custom logo to the WordPress Admin login page header
  */
 function wsd_custom_login_logo() {
 	echo '<style type="text/css">
