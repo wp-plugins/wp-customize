@@ -39,6 +39,10 @@ At this time, no it has not. It's a pretty simple plugin so there shouldn't be a
 
 Yes, and there were no known issues that we found with it. It's a pretty simple plugin but if you should come across a problem just let us know.
 
+= Has this plugin been tested on WordPress version 4.1? =
+
+Yes, and there were no known issues that we found with it.
+
 = Has this plugin been tested on WordPress version 4.2? =
 
 Yes, and there were no known issues that we found with it.
