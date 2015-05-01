@@ -46,6 +46,11 @@ Yes, and there were no known issues that we found with it. It's a pretty simple 
 
 == Changelog ==
 
+= 0.4 =
+
+* Added a field to enter custom CSS for the login page.
+* Modified the label text and text input sizes.
+
 = 0.3 =
 
 * Modified the markup for the sub-section headers in the Customize page found under the Settings section of the WordPress admin to make it more obvious there are different sections.
