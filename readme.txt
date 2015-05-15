@@ -24,7 +24,7 @@ This plugin allows you to set up a custom login page, including your logo. It al
 
 == Installation ==
 
-1. Upload the `customize` folder to the `/wp-content/plugins/` directory
+1. Upload the `wp-customize` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Fill out the settings under `SETTINGS > CUSTOMIZE` in the WordPress Admin
 
@@ -54,23 +54,23 @@ Yes, and there were no known issues that we found with it.
 == Changelog ==
 
 = 0.5 =
-
 * Added Spectrum color picker version 1.7.0 from https://bgrins.github.io/spectrum/
 
 = 0.4 =
-
 * Added a field to enter custom CSS for the login page.
 * Modified the label text and text input sizes.
 
 = 0.3 =
-
 * Modified the markup for the sub-section headers in the Customize page found under the Settings section of the WordPress admin to make it more obvious there are different sections.
 * Tested the plugin with WordPress version 4.0 and found no problems.
 
 = 0.2 =
-
 * This version adds the option to set the width of the logo area.
 
 = 0.1 =
-
 * This is the first version of this plugin. There will very likely be enhancements to it as time goes on, so feel free to let us know how we could improve it!
+
+== Upgrade Notice ==
+
+= 0.5 =
+This version adds color picker widgets to easily select RGB color codes.
