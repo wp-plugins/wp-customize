@@ -3,8 +3,8 @@ Contributors: websightdesigns
 Donate link: http://www.websightdesigns.com/
 Tags: admin, customize, login logo, admin footer, custom login, login page, custom page, footer
 Requires at least: 3.0.1
-Tested up to: 4.0
-Stable tag: 0.4
+Tested up to: 4.2.2
+Stable tag: 0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,7 +23,6 @@ This plugin allows you to set up a custom login page, including your logo. It al
 `Please be sure and rate this plugin! Thanks!`
 
 == Installation ==
-
 
 1. Upload the `customize` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
@@ -54,6 +53,10 @@ Yes, and there were no known issues that we found with it.
 
 == Changelog ==
 
+= 0.5 =
+
+* Added Spectrum color picker version 1.7.0 from https://bgrins.github.io/spectrum/
+
 = 0.4 =
 
 * Added a field to enter custom CSS for the login page.
@@ -69,4 +72,5 @@ Yes, and there were no known issues that we found with it.
 * This version adds the option to set the width of the logo area.
 
 = 0.1 =
+
 * This is the first version of this plugin. There will very likely be enhancements to it as time goes on, so feel free to let us know how we could improve it!
